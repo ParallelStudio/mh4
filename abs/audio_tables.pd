@@ -1,0 +1,9 @@
+#N canvas 560 78 776 670 10;
+#X obj 279 20 inlet;
+#X obj 258 444 outlet;
+#X msg 347 27 list LIGHT_A LIGHT_B LIGHT_C;
+#X obj 31 78 table LIGHT_C;
+#X obj 26 22 table LIGHT_A;
+#X obj 27 49 table LIGHT_B;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;

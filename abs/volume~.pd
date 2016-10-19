@@ -1,0 +1,29 @@
+#N canvas 172 58 689 766 10;
+#X obj 102 101 cnv 15 69 175 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X obj 106 113 vsl 15 120 0 2 0 0 empty empty empty 0 -9 0 10 -204800
+-1 -1 6550 1;
+#X obj 103 240 nbx 5 30 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-204800 -1 -1 0.834488 256;
+#X obj 128 113 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 2 195 rmstodb;
+#X obj 2 217 - 100;
+#X floatatom 5 240 5 0 0 0 - - -, f 5;
+#X floatatom 262 336 5 0 0 0 - - -, f 5;
+#X text 190 318 for setting new preset;
+#X obj -11 325 *~;
+#X obj -4 373 outlet~;
+#X obj -27 15 inlet~;
+#X obj 54 17 inlet;
+#X obj 305 30 inlet;
+#X connect 1 0 4 0;
+#X connect 1 0 6 0;
+#X connect 1 0 7 0;
+#X connect 1 0 9 1;
+#X connect 4 0 5 0;
+#X connect 5 0 2 0;
+#X connect 9 0 10 0;
+#X connect 11 0 9 0;
+#X connect 12 0 1 0;
+#X connect 13 0 3 1;
+#X coords 0 -1 1 1 72 178 2 100 100;

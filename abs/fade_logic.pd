@@ -1,0 +1,10 @@
+#N canvas 21 66 450 300 10;
+#X obj 121 82 r seating_fade;
+#X obj 169 201 s fade;
+#X obj 221 82 r resume_all;
+#X msg 124 122 -99 30000;
+#X msg 225 120 0 30000;
+#X connect 0 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 1 0;
+#X connect 4 0 1 0;
