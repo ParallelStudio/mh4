@@ -1,0 +1,2 @@
+#N canvas 269 149 563 418 10;
+#X obj 195 202 clone noise_channel~ 15;
