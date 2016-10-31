@@ -29,7 +29,6 @@
 #X obj 362 192 t b b;
 #X msg 306 605 \$1 \$2;
 #X obj 306 565 pack f f;
-#X msg 389 222 -18;
 #X msg 337 307 -20;
 #X text 452 107 set trigger threshold;
 #X text 412 124 sound must exceed the second number;
@@ -41,6 +40,7 @@
 #X text 29 447 loops across all channels but this one;
 #X text 119 525 selects out this channel;
 #X text 354 605 destination + gain message for clone;
+#X msg 389 222 -5;
 #X connect 0 1 4 0;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
@@ -67,10 +67,10 @@
 #X connect 20 0 21 0;
 #X connect 21 0 18 1;
 #X connect 24 0 13 0;
-#X connect 24 1 29 0;
+#X connect 24 1 28 0;
 #X connect 25 0 13 0;
-#X connect 25 1 28 0;
+#X connect 25 1 39 0;
 #X connect 26 0 23 0;
 #X connect 27 0 26 0;
 #X connect 28 0 27 1;
-#X connect 29 0 27 1;
+#X connect 39 0 27 1;
