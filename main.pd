@@ -41,7 +41,7 @@
 #X msg 929 412 flapping-bird;
 #X obj 881 476 *~ 5;
 #X obj 987 482 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 12700 1;
+-1 -1 0 1;
 #X obj 994 528 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 12700 1;
 #X obj 939 551 linear_panner_5ch~;
@@ -116,15 +116,16 @@ and behavior like bed;
 #X obj 510 353 *~ 1;
 #X obj 42 162 clone noise_channel~ 15;
 #X obj 293 176 print;
-#X obj 202 72 clone masker~ 6;
 #X obj 433 162 change;
+#X obj 202 72 clone masker~ 6;
+#X text 117 459 use 3 bed players (high \, med \, low);
 #X connect 0 0 4 0;
 #X connect 1 0 2 0;
 #X connect 3 0 0 0;
 #X connect 4 0 1 0;
 #X connect 5 0 32 0;
 #X connect 7 0 86 0;
-#X connect 10 0 99 0;
+#X connect 10 0 98 0;
 #X connect 12 0 10 0;
 #X connect 12 1 9 0;
 #X connect 12 2 8 0;
@@ -228,5 +229,5 @@ and behavior like bed;
 #X connect 87 1 25 0;
 #X connect 93 0 94 0;
 #X connect 93 1 95 0;
-#X connect 98 0 82 0;
-#X connect 99 0 13 0;
+#X connect 98 0 13 0;
+#X connect 99 0 82 0;
