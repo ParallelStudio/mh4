@@ -1,0 +1,9 @@
+#N canvas 845 112 776 670 10;
+#X obj 279 20 inlet;
+#X obj 258 444 outlet;
+#X obj 26 22 table arp;
+#X obj 27 49 table flapping-bird;
+#X obj 28 76 table pad;
+#X msg 347 27 list arp flapping-bird pad;
+#X connect 0 0 5 0;
+#X connect 5 0 1 0;
