@@ -43,7 +43,7 @@
 #X obj 987 482 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
 #X obj 994 528 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 12700 1;
+-1 -1 0 1;
 #X obj 939 551 linear_panner_5ch~;
 #X obj 987 888 dac~ 11 12 13 14 15;
 #X obj 940 672 gain~;
@@ -66,28 +66,9 @@
 #X obj 1134 281 delay 14000;
 #X msg 921 318 0 \, 1 5000;
 #X obj 921 227 delay 4000;
-#X msg 160 816 all bang;
-#X msg 253 817 all arp;
-#X obj 343 696 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 343 756 random 15;
-#X obj 343 816 pack f f;
-#X obj 343 725 t b b;
-#X obj 184 866 clone dispersion_player~ 15;
-#X obj 343 672 metro 500;
-#X obj 343 644 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 412 778 / 100;
-#X obj 412 755 random 100;
+#X msg 109 814 all bang;
 #X obj 921 193 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 343 541 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X msg 343 576 1;
-#X obj 374 576 delay 16000;
-#X msg 374 625 0;
-#X obj 374 601 t b b;
-#X msg 416 656 all 0;
 #X obj 179 735 r loaded;
 #X obj 179 766 t b b;
 #X obj 52 402 r loaded;
@@ -102,37 +83,45 @@
 #X text 203 52 mic masking;
 #X obj 433 61 metro 1000;
 #X obj 52 429 t b b;
-#X text 455 706 instead of random stuff - use 10 mono sound players
-and behavior like bed;
-#X text 25 199 undertone players - 5 minute crossfades to new sounds
+#X text 27 199 undertone players - 5 minute crossfades to new sounds
 ;
 #X text 27 227 texture players - same exact behavior as undertone players
 ;
 #X text 26 250 need to be able to preset volume for each new sound
 ;
-#X obj 459 417 dac~ 1 2;
-#X obj 478 303 adc~;
-#X obj 453 354 *~ 1;
-#X obj 510 353 *~ 1;
 #X obj 42 162 clone noise_channel~ 15;
 #X obj 293 176 print;
 #X obj 433 162 change;
 #X obj 202 72 clone masker~ 6;
 #X text 117 459 use 3 bed players (high \, med \, low);
+#X obj 339 836 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 336 806 r dispersion_fade;
+#X obj 336 757 line;
+#X obj 336 620 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 336 686 1 10000;
+#X obj 394 686 delay 10000;
+#X msg 394 714 0 6000;
+#X msg 184 817 all shuffle02_weave_ch;
+#X obj 184 866 clone dispersion_player~ 15;
+#X text 197 891 15 mono sound players - channel number gets auto-prepended
+;
+#X obj 336 781 s dispersion_fade;
 #X connect 0 0 4 0;
 #X connect 1 0 2 0;
 #X connect 3 0 0 0;
 #X connect 4 0 1 0;
 #X connect 5 0 32 0;
-#X connect 7 0 86 0;
-#X connect 10 0 98 0;
+#X connect 7 0 70 0;
+#X connect 10 0 77 0;
 #X connect 12 0 10 0;
 #X connect 12 1 9 0;
 #X connect 12 2 8 0;
 #X connect 12 3 11 0;
 #X connect 13 0 14 0;
 #X connect 14 0 20 0;
-#X connect 14 0 67 0;
+#X connect 14 0 57 0;
 #X connect 16 0 7 0;
 #X connect 17 0 24 0;
 #X connect 18 0 24 3;
@@ -190,44 +179,32 @@ and behavior like bed;
 #X connect 55 0 28 0;
 #X connect 55 0 46 0;
 #X connect 55 0 30 0;
-#X connect 56 0 62 0;
-#X connect 57 0 62 1;
-#X connect 57 0 62 2;
-#X connect 58 0 61 0;
-#X connect 59 0 60 0;
-#X connect 60 0 62 3;
-#X connect 61 0 59 0;
-#X connect 61 1 66 0;
-#X connect 63 0 58 0;
-#X connect 64 0 63 0;
-#X connect 65 0 60 1;
-#X connect 66 0 65 0;
-#X connect 67 0 55 0;
-#X connect 68 0 70 0;
-#X connect 68 0 69 0;
-#X connect 69 0 64 0;
-#X connect 70 0 72 0;
-#X connect 71 0 64 0;
-#X connect 72 0 71 0;
-#X connect 72 1 73 0;
-#X connect 73 0 62 3;
-#X connect 74 0 75 0;
-#X connect 75 0 56 0;
-#X connect 75 1 57 0;
-#X connect 76 0 87 0;
-#X connect 77 0 31 0;
-#X connect 78 0 42 0;
-#X connect 79 0 96 0;
-#X connect 80 0 96 0;
-#X connect 81 0 79 0;
-#X connect 82 1 83 0;
-#X connect 82 2 83 1;
-#X connect 83 0 96 0;
-#X connect 83 0 97 0;
-#X connect 86 0 12 0;
-#X connect 87 0 17 0;
-#X connect 87 1 25 0;
-#X connect 93 0 94 0;
-#X connect 93 1 95 0;
-#X connect 98 0 13 0;
-#X connect 99 0 82 0;
+#X connect 56 0 88 0;
+#X connect 57 0 55 0;
+#X connect 58 0 59 0;
+#X connect 59 0 56 0;
+#X connect 59 1 87 0;
+#X connect 60 0 71 0;
+#X connect 61 0 31 0;
+#X connect 62 0 42 0;
+#X connect 63 0 75 0;
+#X connect 64 0 75 0;
+#X connect 65 0 63 0;
+#X connect 66 1 67 0;
+#X connect 66 2 67 1;
+#X connect 67 0 75 0;
+#X connect 67 0 76 0;
+#X connect 70 0 12 0;
+#X connect 71 0 17 0;
+#X connect 71 1 25 0;
+#X connect 77 0 13 0;
+#X connect 78 0 66 0;
+#X connect 80 0 88 2;
+#X connect 81 0 80 0;
+#X connect 82 0 90 0;
+#X connect 83 0 84 0;
+#X connect 83 0 85 0;
+#X connect 84 0 82 0;
+#X connect 85 0 86 0;
+#X connect 86 0 82 0;
+#X connect 87 0 88 1;
