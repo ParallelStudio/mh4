@@ -1,4 +1,4 @@
-#N canvas 273 60 1377 962 10;
+#N canvas 262 31 1377 962 10;
 #X obj 776 44 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 776 87 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -46,7 +46,7 @@
 -1 -1 12700 1;
 #X obj 939 551 linear_panner_5ch~;
 #X obj 987 888 dac~ 11 12 13 14 15;
-#X obj 946 672 gain~;
+#X obj 940 672 gain~;
 #X obj 995 672 gain~;
 #X obj 1045 672 gain~;
 #X obj 1094 672 gain~;
