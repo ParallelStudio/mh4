@@ -1,4 +1,4 @@
-#N canvas 93 -1013 1377 962 10;
+#N canvas 93 22 1377 962 10;
 #X obj 776 44 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 776 87 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -40,7 +40,7 @@
 #X obj 1092 490 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
 #X obj 1099 536 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 12700 1;
+-1 -1 0 1;
 #X obj 1044 559 linear_panner_5ch~;
 #X obj 1092 896 dac~ 11 12 13 14 15;
 #X obj 1045 680 gain~;
@@ -143,6 +143,14 @@
 #X text 926 13 midi in;
 #X msg 36 109 all 2;
 #X obj 42 162 clone noise_channel~ 15;
+#X obj 825 285 swoosh;
+#X obj 828 532 dac~;
+#X obj 825 317 gain~;
+#X obj 823 251 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 882 226 loadbang;
+#X obj 881 294 line;
+#X msg 888 259 10 10000;
 #X connect 0 0 4 0;
 #X connect 1 0 2 0;
 #X connect 3 0 0 0;
@@ -273,3 +281,10 @@
 #X connect 118 0 119 0;
 #X connect 119 0 116 0;
 #X connect 121 0 122 0;
+#X connect 123 0 125 0;
+#X connect 125 0 124 0;
+#X connect 125 0 124 1;
+#X connect 126 0 123 0;
+#X connect 127 0 129 0;
+#X connect 128 0 125 1;
+#X connect 129 0 128 0;
