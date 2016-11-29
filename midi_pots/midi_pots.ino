@@ -1,12 +1,12 @@
-int pot1 = 14; 
+int pot1 = 17; 
 int val1 = 0;       
 int raw1 = 0;
 
-int pot2 = 15; 
+int pot2 = 16; 
 int val2 = 0;       
 int raw2 = 0;
 
-int pot3 = 16; 
+int pot3 = 15; 
 int val3 = 0;       
 int raw3 = 0;
 const int channel = 1;
