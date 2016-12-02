@@ -109,7 +109,7 @@
 #X obj 1237 169 tone~ 57 5 100;
 #X obj 1235 136 tone~ 59 5 100;
 #X msg 987 319 1 2000;
-#X msg 1156 164 9;
+#X msg 1156 164 12;
 #X connect 0 0 97 0;
 #X connect 1 0 33 0;
 #X connect 1 0 34 0;

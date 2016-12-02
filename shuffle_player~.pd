@@ -1,4 +1,4 @@
-#N canvas 149 377 632 655 10;
+#N canvas 533 208 632 655 10;
 #X obj 96 323 *~;
 #X obj 100 600 dac~;
 #X obj 230 377 loadbang;
@@ -22,6 +22,7 @@
 #X obj 160 319 loadbang;
 #X obj 230 259 print;
 #X msg 160 342 -40;
+#X obj 448 51 inlet;
 #X connect 0 0 19 0;
 #X connect 2 0 3 0;
 #X connect 3 0 8 0;
@@ -43,3 +44,4 @@
 #X connect 19 0 1 0;
 #X connect 20 0 22 0;
 #X connect 22 0 19 1;
+#X connect 23 0 19 1;

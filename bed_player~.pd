@@ -13,7 +13,8 @@
 #X obj 99 294 gain~;
 #X obj 238 292 gain~;
 #X obj 321 223 loadbang;
-#X msg 321 251 -30;
+#X obj 456 151 inlet;
+#X msg 321 251 -24;
 #X connect 0 0 9 0;
 #X connect 0 0 9 2;
 #X connect 0 0 9 4;
@@ -40,6 +41,8 @@
 #X connect 8 0 7 2;
 #X connect 10 0 0 0;
 #X connect 11 0 6 0;
-#X connect 12 0 13 0;
+#X connect 12 0 14 0;
 #X connect 13 0 11 1;
 #X connect 13 0 10 1;
+#X connect 14 0 11 1;
+#X connect 14 0 10 1;
