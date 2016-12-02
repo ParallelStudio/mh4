@@ -1,4 +1,4 @@
-#N canvas 1023 163 929 772 10;
+#N canvas 827 88 929 772 10;
 #X obj 69 442 dac~;
 #X msg 153 403 set \$1;
 #X obj 153 326 loadbang;
@@ -36,9 +36,10 @@ occurs;
 #X msg 372 503 1;
 #X msg 408 503 0.75;
 #X msg 142 162 set \$1;
-#X msg 144 188 -60;
+#X msg 144 188 -100;
 #X obj 370 283 > 35;
 #X floatatom 26 96 5 0 0 0 - - -, f 5;
+#X obj 242 97 noise~;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;
