@@ -1,4 +1,4 @@
-#N canvas 22 302 601 530 10;
+#N canvas 37 257 601 530 10;
 #X obj 93 6 noise~;
 #X msg 153 451 set \$1;
 #X obj 153 326 loadbang;
@@ -24,7 +24,7 @@
 #X obj 67 491 dac~ 99;
 #X text 251 404 excludes center channels;
 #X text 123 490 defaults to nonexistant channel 99;
-#X obj 153 404 route 4 5 11;
+#X obj 153 404 route 6 7 13 14;
 #X connect 0 0 8 0;
 #X connect 1 0 21 0;
 #X connect 2 0 3 0;
@@ -44,4 +44,4 @@
 #X connect 18 0 20 0;
 #X connect 19 0 7 1;
 #X connect 20 0 7 1;
-#X connect 24 3 1 0;
+#X connect 24 4 1 0;
