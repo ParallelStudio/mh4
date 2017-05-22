@@ -1,4 +1,4 @@
-#N canvas -2 23 1586 955 10;
+#N canvas 191 23 1586 955 10;
 #X obj 776 44 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 776 87 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -31,7 +31,7 @@
 #X obj 1092 490 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
 #X obj 1099 536 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 12700 1;
+-1 -1 0 1;
 #X obj 1044 559 linear_panner_5ch~;
 #X obj 1092 896 dac~ 11 12 13 14 15;
 #X obj 1045 680 gain~;
@@ -74,7 +74,7 @@
 #X obj 821 163 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 880 138 loadbang;
-#N canvas 996 24 909 484 midi_control 1;
+#N canvas 702 73 909 484 midi_control 1;
 #X obj 146 234 outlet;
 #X obj 406 233 outlet;
 #X obj 715 232 outlet;
@@ -167,6 +167,11 @@
 #X obj 810 8 r reset;
 #X msg 764 33 0;
 #X msg 810 53 1;
+#X obj 541 404 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 753 391 ctlin;
+#X floatatom 721 435 5 0 0 0 - - -, f 5;
+#X floatatom 775 435 5 0 0 0 - - -, f 5;
 #X connect 9 0 30 1;
 #X connect 9 0 37 1;
 #X connect 9 0 71 0;
@@ -279,6 +284,8 @@
 #X connect 86 0 85 0;
 #X connect 87 0 73 1;
 #X connect 88 0 73 1;
+#X connect 90 0 91 0;
+#X connect 90 1 92 0;
 #X restore 939 26 pd midi_control;
 #X msg 705 116 \; pd dsp 1;
 #X obj 628 760 s shuffle_bed_fade;
@@ -306,9 +313,9 @@
 #X msg 686 693 0 3000;
 #X msg 323 713 0 3000;
 #X obj 265 645 delay 2000;
-#X msg 113 816 all shuffle5_weave_ch;
-#X msg 485 787 shuffle5_bed_L;
-#X msg 506 810 shuffle5_bed_R;
+#X msg 113 816 all shuffle1_weave_ch;
+#X msg 485 787 shuffle1_bed_L;
+#X msg 506 810 shuffle1_bed_R;
 #X msg 53 572 pan4_bed_L;
 #X msg 75 598 pan4_bed_L;
 #X msg 1034 420 pan4_pass;
@@ -380,13 +387,14 @@
 #X obj 620 246 loadbang;
 #X obj 202 72 clone masker~ 6;
 #X obj 45 163 clone noise_channel~ 15;
-#X msg 57 128 all -37;
 #X obj 330 263 s music_ducking;
 #X obj 433 218 delay 1000;
 #X msg 365 237 0;
 #X msg 330 237 1;
 #X obj 433 275 urn-jb 12;
 #X obj 331 213 delay 11000;
+#X obj 337 176 loadbang;
+#X msg 56 129 all -34;
 #X connect 0 0 3 0;
 #X connect 1 0 59 0;
 #X connect 2 0 0 0;
@@ -394,9 +402,9 @@
 #X connect 4 0 125 0;
 #X connect 5 0 36 0;
 #X connect 8 0 38 0;
+#X connect 10 0 156 0;
 #X connect 10 0 157 0;
-#X connect 10 0 158 0;
-#X connect 10 0 161 0;
+#X connect 10 0 160 0;
 #X connect 12 0 5 0;
 #X connect 13 0 138 0;
 #X connect 14 0 138 3;
@@ -553,20 +561,22 @@
 #X connect 140 0 141 0;
 #X connect 141 0 139 3;
 #X connect 143 0 55 1;
-#X connect 144 0 160 0;
+#X connect 144 0 159 0;
 #X connect 145 0 144 1;
 #X connect 146 0 148 0;
 #X connect 147 0 120 0;
 #X connect 148 1 149 0;
 #X connect 149 0 150 0;
 #X connect 149 1 151 0;
+#X connect 150 0 145 0;
 #X connect 151 0 145 0;
 #X connect 152 0 151 0;
 #X connect 153 0 88 0;
-#X connect 155 0 154 0;
-#X connect 157 0 144 0;
-#X connect 158 0 156 0;
-#X connect 159 0 156 0;
-#X connect 160 0 142 0;
-#X connect 160 0 89 0;
-#X connect 161 0 159 0;
+#X connect 156 0 144 0;
+#X connect 157 0 155 0;
+#X connect 158 0 155 0;
+#X connect 159 0 142 0;
+#X connect 159 0 89 0;
+#X connect 160 0 158 0;
+#X connect 161 0 158 0;
+#X connect 162 0 154 0;
