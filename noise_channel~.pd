@@ -1,9 +1,9 @@
-#N canvas 139 179 601 530 10;
+#N canvas 108 169 601 530 10;
 #X obj 128 14 noise~;
 #X msg 153 451 set \$1;
 #X obj 153 326 loadbang;
 #X obj 153 350 f \$1;
-#X obj 153 375 + 1;
+#X obj 152 377 + 1;
 #X text 182 377 routes to each channel;
 #X obj 33 10 inlet;
 #X obj 67 163 gain~;
@@ -20,9 +20,9 @@
 #X obj 135 279 line 1;
 #X msg 52 81 \$1 10000;
 #X obj 67 491 dac~ 99;
-#X text 251 404 excludes center channels;
+#X text 272 406 excludes center channels;
 #X text 123 490 defaults to nonexistant channel 99;
-#X obj 153 404 route 6 7 13 14;
+#X obj 174 406 route 6 7 13 14;
 #X text 110 108 change default noise volume here \, and below / after
 loadbang;
 #X text 189 162 change default noise volume here \, and below / after
@@ -34,6 +34,7 @@ loadbang;
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;
 #X connect 4 0 22 0;
+#X connect 4 0 1 0;
 #X connect 6 0 18 0;
 #X connect 7 0 10 0;
 #X connect 8 0 7 0;
@@ -46,6 +47,5 @@ loadbang;
 #X connect 17 0 10 1;
 #X connect 17 0 15 0;
 #X connect 18 0 25 0;
-#X connect 22 4 1 0;
 #X connect 25 0 7 1;
 #X connect 26 0 7 1;
